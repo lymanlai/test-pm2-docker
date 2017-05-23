@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "main": "index.js",
     "scripts": {
-        "pm2-docker": "docker run -p 8080:3000 -v `pwd`:/app keymetrics/pm2-docker-alpine:7"
+        "pm2-docker-build": "docker build -t lyman/pm2-docker-alpine:7 .",
+        "pm2-docker-run": "docker run -p 8080:3000 -v `pwd`:/app lyman/pm2-docker-alpine:7"
     },
     "repository": "https://github.com/lymanlai/test-pm2-docker.git",
     "author": "Lyman Lai <lyman.lai@yaha.me>",
